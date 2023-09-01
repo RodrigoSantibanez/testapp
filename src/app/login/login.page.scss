@@ -1,0 +1,44 @@
+ion-content{
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+}
+ion-item{
+    --padding-bottom: 10px;
+}
+
+.ion-card-subtitle{
+    width: 100%; // Ajusta el ancho de la tarjeta según tus necesidades
+    text-align: center;
+    justify-content: center;
+}
+
+
+.title-animation {
+    display: inline-block;
+    position: relative;
+    animation: moveRight 5s infinite;
+    opacity: 1;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @keyframes moveRight {
+    0%, 100% {
+      transform: translateX(0);
+    }
+  
+    25% {
+      transform: translateX(100%);
+    }
+  
+    50% {
+      transform: translateX(-100%);
+    }
+  
+    75% {
+      transform: translateX(100%);
+    }
+  }
+  

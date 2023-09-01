@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Restablecer Contraseña  </ion-card-title>
+      <ion-card-subtitle>
+        Ingresa tu nombre de usuario para recuperar tu contraseña
+      </ion-card-subtitle>
+    </ion-card-header>
+    <form >
+      <ion-item lines="full">
+        <ion-label position="floating">Usuario</ion-label>
+        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+        <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="routerLogin()" shape="round">Recuperar</ion-button>
+        <ion-button (click)="routerLogin()" shape="round">Volver</ion-button>
+      </ion-item>
+    </form>
+  </ion-card>
+</ion-content>

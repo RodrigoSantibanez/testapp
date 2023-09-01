@@ -1,0 +1,13 @@
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; // Opcional para que ocupe todo el alto de la ventana
+  }
+  
+  ion-card {
+    width: 100%; // Ajusta el ancho de la tarjeta según tus necesidades
+    text-align: center;
+    justify-content: center;
+    
+  }
