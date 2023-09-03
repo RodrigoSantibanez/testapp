@@ -25,3 +25,30 @@
 #container a {
   text-decoration: none;
 }
+
+.title-animation {
+  display: inline-block;
+  position: relative;
+  animation: moveRight 5s infinite;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes moveRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  75% {
+    transform: translateX(100%);
+  }
+}
