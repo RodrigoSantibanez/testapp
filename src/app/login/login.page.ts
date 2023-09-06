@@ -33,7 +33,7 @@ export class LoginPage implements OnInit {
   }
 
   async ingresar() {
-    const minLength = 4; // Cambia esto al número mínimo de caracteres
+    const minLength = 4;
 
     if (this.user.usuario.length < minLength) {
       const alert = await this.alertController.create({
