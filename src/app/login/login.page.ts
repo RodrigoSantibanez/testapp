@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { AuthService } from '../Services/auth.service';
 
 
 @Component({
@@ -15,22 +16,11 @@ export class LoginPage implements OnInit {
   };
 
   constructor(private router: Router,
-    private alertController: AlertController) {}
+    private alertController: AlertController,
+    private authService:AuthService) {}
 
   ngOnInit() {}
 
-  //ingresar() {
-  //  const navigationExtras: NavigationExtras = {
-  //    state: {
-  //      user: this.user
-  //    }
-  //  };
-  //  this.router.navigate(['/home'], navigationExtras);
-  //}
-
-  routerRestablecer(){
-    this.router.navigate(['/restablecer']);
-  }
 
   async ingresar() {
     const minLength = 4;
@@ -49,6 +39,7 @@ export class LoginPage implements OnInit {
           user: this.user,
         },
       };
+      this.authService.capturarUsuario(this.user.usuario);
       this.router.navigate(['/home'], navigationExtras);
     }
   }
